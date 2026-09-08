@@ -1,0 +1,176 @@
+body{
+    background-color: #282829;
+    color: black;
+}
+
+@keyframes secret{
+    0%{
+        opacity: 0;
+        transform: scale(0.001);
+    }
+
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.bodysecret{
+    background-color: white;
+    font-family: "Arial Black";
+    font-size: 50px;
+}
+
+.divsecret{
+    animation: secret 0.8s ease-in-out;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 25%;
+}
+
+
+
+@keyframes photo{
+    0%{
+        transform: rotate(0);
+    }
+    25%{
+        transform: rotate(5deg);
+    }
+    50%{
+        transform: rotate(5deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+
+@keyframes all{
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.overphotoblock{
+    position: relative;
+    display: flex;
+    top: 20%;
+    bottom: 10%;
+}
+
+.photoblock{
+    animation: all 3s ease-out;
+    animation: photo 10s infinite ease-out;
+
+    position: relative;
+    bottom: 50%;
+    top: 50%;
+    margin-left: 5%;
+   background-color:darkslategray;
+   box-shadow: 5px 5px 10px black;
+   width: 350px;
+   height: 550px;
+   align-items: center;
+   border-radius: 5%;
+   overflow: hidden;
+   justify-content: left;
+}
+
+.image{
+    position: relative;
+    bottom: 220px;
+    right: 70px;
+}
+
+.image2{
+    position: relative;
+    left: -120px;    
+}
+
+.image3{
+    position: relative;
+    top: 125px;
+    right: 70px;    
+}
+
+.image4{
+    position: relative;
+    width: 400px;
+}
+
+.image5{
+    height: 600px;
+    position: relative;
+    right: 250px
+}
+
+.textbloc{
+    position: relative;
+    right: 10;;
+}
+
+.textzag{
+    animation: all 3s ease-out;
+
+    position: relative;
+    left: 50px;
+    bottom: 60px;
+    font-family: "Arial Black";
+    font-size: 50pt;
+    color: white;
+}
+
+.text{
+    animation: all 3s ease-out;
+    
+    position: relative;
+    font-family: "Arial Black";
+    font-size: 40px;
+    left: 50px;
+    bottom: 100px;
+    color: white;
+}
+
+.line{
+    animation: all 3s ease-out;
+
+     position: relative;
+     bottom: 600px;
+     left: 30px
+}
+
+.source{
+
+    transition: transform 1s ease;
+
+    position: relative;
+    text-align: center;
+    top: 50px;
+    height: 50px;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.source:hover{
+    transform: scale(1.5);
+}
+
+a:link{
+    color: #d8d8da;
+    font-family: "Arial Black";
+}
+a:visited{
+    color: #d8d8da;
+    font-family: "Arial Black";
+}
+
+a:hover{
+    color: red;
+}
