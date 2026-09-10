@@ -1,0 +1,9 @@
+body{
+    background-image: url("data/flat.jpg");
+    background-size: cover;
+}
+
+form{
+    position: absolute;
+    display: grid;
+}
