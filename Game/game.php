@@ -1,8 +1,30 @@
 <?php
-    $positionY = 335;
-    $positionZ = 145;
+    session_start();
 
-    
+    if(empty($_SESSION["positionY"]) && empty($_SESSION["positionZ"])){
+        $_SESSION["positionY"] = 335;
+        $_SESSION["positionZ"] = 145;
+    }
+
+    $directions = ["left", "up", "right", "down"];
+
+    foreach($directions as $direction){
+        if(!empty($_POST[$direction])){
+            switch($direction){
+                case "left";
+                    $_SESSION["positionY"] -= 70;
+                    break;
+                case "right";
+                    $_SESSION["positionY"] += 70;
+                    break;
+                case "up";
+                    $_SESSION["positionZ"] -= 70;
+                    break;
+                case "down";
+                    $_SESSION["positionZ"] += 70;
+            }
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +38,7 @@
     
     img{
         position: absolute;
-        transform: translate(<?php echo "$positionY" ?>px, <?php echo "$positionZ" ?>px);
+        transform: translate(<?php echo $_SESSION["positionY"] ?>px, <?php echo $_SESSION["positionZ"] ?>px);
         height: 80px;
     }
 
