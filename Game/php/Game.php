@@ -6,13 +6,12 @@ class Game
     final const STARTPOS_Z =  145;
     const STEPLENGHT = 70;
 
-    function __construct(public $boundYZ{
-        get => $this->boundYZ[0] . " " . $this->boundYZ[1];
+    function __construct(public $boundLRUD{
         set($value){
             if(gettype($value) == "array"){
-                if(count($value) != 2)
-                    $value = array("0000", "0000");
-                $this->boundYZ = $value;
+                if(count($value) != 4)
+                    $value = array("0000", "0000", "0000", "0000");
+                $this->boundLRUD = $value;
             }
             else
                 echo "Введите массив";
@@ -26,17 +25,23 @@ class Game
 
     function left(string|int $step = 1){
         $nextstep = $_SESSION["positionY"] - self::STEPLENGHT * $step;
-        if($nextstep > $this->boundYZ[0])
+        if($nextstep > $this->boundLRUD[0])
             $_SESSION["positionY"] = $nextstep;
     }
     function right(string|int $step = 1){
-        $_SESSION["positionY"] += self::STEPLENGHT * $step;
+        $nextstep = $_SESSION["positionY"] + self::STEPLENGHT * $step;
+        if($nextstep < $this->boundLRUD[1])
+            $_SESSION["positionY"] = $nextstep;
     }
     function up(string|int $step = 1){
-        $_SESSION["positionZ"] -= self::STEPLENGHT * $step;
+        $nextstep = $_SESSION["positionZ"] - self::STEPLENGHT * $step;
+        if($nextstep > $this->boundLRUD[2])
+            $_SESSION["positionZ"] = $nextstep;
     }
     function down(string|int $step = 1){
-        $_SESSION["positionZ"] += self::STEPLENGHT * $step;
+        $nextstep = $_SESSION["positionZ"] + self::STEPLENGHT * $step;
+        if($nextstep < $this->boundLRUD[3])
+            $_SESSION["positionZ"] = $nextstep;
     }
 }
 

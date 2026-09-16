@@ -4,6 +4,10 @@ body{
 }
 
 form{
-    position: absolute;
+    position: relative;
     display: grid;
+}
+
+.status{
+    position: absolute;
 }

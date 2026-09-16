@@ -5,8 +5,20 @@
 
     session_start();
 
-    $game = new Game(["1000", "1024"]);
-    $game->left("1");
+    $game = new Game(["265", "1140", "75", "500"]);
+    
+    if(!empty($_POST["left"])){
+        $game->left((int)$_POST["left"]);
+    }
+    if(!empty($_POST["right"])){
+        $game->right((int)$_POST["right"]);
+    }
+    if(!empty($_POST["up"])){
+        $game->up((int)$_POST["up"]);
+    }
+    if(!empty($_POST["down"])){
+        $game->down((int)$_POST["down"]);
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,7 +48,8 @@
             <input type="text" name="down", placeholder="down">
         </div>
         <input type="submit" text="ходить!">
+        <div class="status">Step Status: </div>
     </form>
-    <img src="styles/data/941851-200.png" alt="empty">
+    <img src="styles/data/941851-200.png" alt="!empty">
 </body>
 </html>
