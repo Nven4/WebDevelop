@@ -1,5 +1,7 @@
 <?php
-    require_once "php/test.php";
+    spl_autoload_register(function($classname){
+        require "php/$classname.php";
+    });
 
     session_start();
 
