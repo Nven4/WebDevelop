@@ -1,30 +1,10 @@
 <?php
+    require_once "php/test.php";
+
     session_start();
 
-    if(empty($_SESSION["positionY"]) && empty($_SESSION["positionZ"])){
-        $_SESSION["positionY"] = 335;
-        $_SESSION["positionZ"] = 145;
-    }
-
-    $directions = ["left", "up", "right", "down"];
-
-    foreach($directions as $direction){
-        if(!empty($_POST[$direction])){
-            switch($direction){
-                case "left";
-                    $_SESSION["positionY"] -= 70;
-                    break;
-                case "right";
-                    $_SESSION["positionY"] += 70;
-                    break;
-                case "up";
-                    $_SESSION["positionZ"] -= 70;
-                    break;
-                case "down";
-                    $_SESSION["positionZ"] += 70;
-            }
-        }
-    }
+    $game = new Game(["1000", "1024"]);
+    $game->left("1");
 ?>
 <!DOCTYPE html>
 <html lang="en">
