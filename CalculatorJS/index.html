@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Посчитай</h1>
+        <a href="#">Главная</a>
+        <div class="burger">
+            <hr>
+            <hr>
+            <hr>
+        </div>
+    </header>
+    <main>
+        <form method="post">
+            <div>
+                <h2>Первое значение:</h2>
+                <input type="number" name="firstNumb">
+            </div>
+            <div>
+                <h2>Второе значение:</h2>
+                <input type="number" name="secondNumb">
+            </div>
+            <div class="select">
+                <h2>Операция:</h2>
+                <select name="operation">
+                    <option value="*">Умножить</option>
+                    <option value="+">Сложить</option>
+                    <option value="-">Вычесть</option>
+                    <option value="/">Поделить</option>
+                </select>
+            </div>
+            <div class="submit">
+                <input type="submit">
+            </div>
+        </form>
+        <h2 class="resulthead">Выводы: </h2>
+    </main>
+    <script src="app/main.js"></script>
+</body>
+</html>

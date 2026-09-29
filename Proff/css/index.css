@@ -1,0 +1,252 @@
+@font-face {
+    font-family: "Glina";
+    src: url(font/Glina-Script-em.-Thin_0.otf);
+}
+
+body{
+    overflow-x: hidden;
+}
+
+header{
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    background-color: rgb(227, 227, 227);
+    border-radius: 15px;
+}
+
+.con_logo{
+    font-family: "Glina";
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+
+    justify-content: center;
+    padding: 5px;
+
+    font-size: 25px;
+    font-family: "Glina";
+
+    transition: all 0.15s ease;
+}
+
+a:hover{
+    background-color: rgb(145, 145, 145);
+}
+
+.header-2{
+
+    button{
+        outline: none;
+        border-radius: 5px;
+
+        font-size: 20px;
+        font-family: "Glina";
+
+        transition: all 0.15s ease;
+    }
+
+    button:hover{
+        transform: scale(1.1);
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 25px;
+    font-family: "Glina";
+}
+
+input[type=search]{
+    height: 30px;
+    margin: 10px;
+    border-radius: 50px;
+    padding: 10px;
+
+    font-size: 20px;
+    font-family: "Glina";
+
+    transition: all 0.15s ease;
+}
+
+input[type=search]:focus{
+    box-shadow: 0px 0px 3px 5px;
+    transform: scale(1.05);
+}
+
+.con_sld{
+    display:flex;
+    justify-content: center;
+}
+
+.card_sld{
+    img{
+        width: 300px;
+        height: auto;
+        border-radius: 15px;
+    }
+    margin: 10px;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(227, 227, 227);
+    border-radius: 15px;
+
+    padding: 10px;
+    font-size: 18px;
+    font-family: "Glina";
+}
+
+.d_ct{
+    display: flex;
+    justify-content: center;
+
+    .d{
+        margin: 5px;
+        width: 20px;
+        height: 20px;
+        background-color: rgb(227, 227, 227);
+        border-radius: 50%;
+    }
+    
+    .d_2{
+        margin: 5px;
+        width: 20px;
+        height: 20px;
+        background-color: rgb(1, 1, 1);
+        border-radius: 50%;
+    }
+}
+
+.card_inf{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card_info{
+    width: 350px;
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 15px;
+    margin: 10px;
+    text-align: center;
+
+    transition: all 0.30s ease-in-out;
+}
+
+.card_info:hover{
+    transform: translateY(-10px);
+}
+
+.infofrat{
+    margin-top: 5px;
+    background-color: rgb(227, 227, 227);
+    border-radius: 15px;
+}
+
+.con_logo_1{
+    font-size: 18px;
+    font-family: "Glina";
+    img{
+        margin-left: 30px;
+        width: 150px;
+    }
+}
+
+.on_card{
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card{
+    img{
+        height: 25%;
+    }
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    a{
+        outline: auto;
+        border-radius: 30px;
+    }
+
+    width: 350px;
+    height: 350px;
+    background-color: rgb(227, 227, 227);
+    margin: 5px;
+    border-radius: 15px;
+    font-size: 18px;
+    font-family: "Glina";
+
+    transition: all 0.30s ease-in-out;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+
+.rat{
+    position: relative;
+    bottom: 15px;
+}
+
+.parters{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    img{
+        height: 100px;
+        margin: 10px;
+    }
+
+    display: flex;
+    justify-content: center;
+    background-color: rgb(227, 227, 227);
+}
+
+footer{
+    display: flex;
+    justify-content:space-around;
+    background-color: black;
+    color: white;
+}
+
+.burger{
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    div{
+        background-color: rgb(227, 227, 227);
+        width: 45px;
+        height: 6px;
+        border-radius: 15px;
+    }
+
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+@media(max-width: 1000px){
+    header .burger{
+        display: grid;
+        cursor: pointer;
+    }
+    header nav{
+        display: none;
+    }
+    header .btn_vv{
+        display: none;
+    }
+}
